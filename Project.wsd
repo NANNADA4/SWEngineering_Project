@@ -1,4 +1,4 @@
-@startuml
+@startuml Sample
 usecase first
 usecase second
 
