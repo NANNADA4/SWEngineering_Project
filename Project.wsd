@@ -1,0 +1,9 @@
+@startuml
+usecase first
+usecase second
+
+actor user
+actor admin
+
+user --> first
+@enduml
