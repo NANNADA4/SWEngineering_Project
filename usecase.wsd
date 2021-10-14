@@ -1,0 +1,70 @@
+@startuml usecase
+left to right direction
+
+rectangle 음성통화 {
+    usecase 음성통화수신
+    usecase 음성통화발신
+}
+
+rectangle 영상통화 {
+    usecase 영상통화수신
+    usecase 영상통화발신
+}
+
+rectangle 계정 {
+    usecase 계정생성
+    usecase 계정탈퇴
+    usecase 계정제거
+}
+
+rectangle 파일 {
+    usecase 파일수신
+    usecase 파일발신
+}
+
+rectangle 일반채팅 {
+    usecase 일반채팅수신
+    usecase 일반채팅발신
+}
+
+rectangle 단체채팅 {
+    usecase 단체채팅방생성
+    usecase 단체채팅방제거
+    usecase 단체채팅수신
+    usecase 단체채팅발신
+    usecase 단체채팅참여
+}
+
+actor User
+actor 이용자
+actor 관리자
+actor 회원
+actor 수신인
+actor 발신인
+actor 게스트
+
+수신인 --|> 회원
+발신인 --|> 회원
+게스트 --|> 이용자
+회원 --|> 이용자
+이용자 --|> User
+관리자 --|> User
+
+관리자 --> 계정제거
+이용자 --> 단체채팅수신
+이용자 --> 단체채팅발신
+게스트 --> 단체채팅참여
+회원 --> 계정생성
+회원 --> 계정탈퇴
+회원 --> 단체채팅방생성
+회원 --> 단체채팅방제거
+수신인 --> 영상통화수신
+수신인 --> 음성통화수신
+수신인 --> 파일수신
+수신인 --> 일반채팅수신
+발신인 --> 영상통화발신
+발신인 --> 음성통화발신
+발신인 --> 파일발신
+발신인 --> 일반채팅발신
+
+@enduml
