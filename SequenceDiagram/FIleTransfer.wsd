@@ -51,6 +51,15 @@ activate DB
 
 DB --> 시스템 : 파일저장확인
 deactivate DB
+
+시스템 -> DB : 파일전송요청
+
+DB -> 수신인 : 파일전송
 deactivate DB
+
+수신인 --> 시스템 : 파일수신확인
+
+시스템 --> 발신인 : 파일전송결과출력
+deactivate 시스템
 
 @enduml
