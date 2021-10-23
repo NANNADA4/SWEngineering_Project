@@ -1,0 +1,92 @@
+@startuml GroupChat
+actor 발신인
+participant 로그인인증
+participant 시스템
+database DB
+actor 수신인
+actor 게스트
+
+autonumber 1.1
+발신인 -> 로그인인증 : 로그인시도
+activate 로그인인증
+
+로그인인증 -> DB : 계정정보확인요청
+activate DB
+
+DB -> DB : 계정확인
+activate DB
+deactivate DB
+
+DB --> 로그인인증 : 결과반환
+deactivate DB
+
+로그인인증 --> 발신인 : 로그인결과출력
+deactivate 로그인인증
+
+autonumber 2.1
+발신인 -> 시스템 : 단체채팅방생성
+activate 시스템
+
+시스템 -> DB : 단체채팅방생성요청
+activate DB
+
+DB -> DB : 단체채팅방생성
+activate DB
+
+DB --> 시스템 : 결과반환
+deactivate DB
+deactivate DB
+
+시스템 -> 발신인 : 단체채팅방생성출력
+deactivate 시스템
+
+autonumber 3.1
+발신인 -> 시스템 : 단체채팅초대
+activate 시스템
+
+시스템 -> 수신인 : 단체채팅초대보내기
+
+수신인 --> 시스템 : 단체채팅초대수락
+
+시스템 -> 게스트 : 단체채팅보내기
+
+게스트 --> 시스템 : 단체채팅초대수락
+
+시스템 -> DB : 초대인원저장요청
+activate DB
+
+DB -> DB : 초대인원저장
+activate DB
+
+DB --> 시스템 : 결과반환
+deactivate DB
+deactivate DB
+
+시스템 -> 발신인 : 단체채팅초대출력
+deactivate 시스템
+
+autonumber 4.1
+발신인 -> 시스템 : 메시지발송
+activate 시스템
+
+시스템 -> DB : 메시지기록저장요청
+activate DB
+
+DB -> DB : 메시지기록저장
+activate DB
+deactivate DB
+deactivate DB
+
+시스템 -> 수신인 : 수신인으로메시지발송
+
+수신인 --> 시스템 : 수신확인
+
+시스템 -> 게스트 : 게스트로메시지발송
+
+게스트 --> 시스템 : 수신확인
+
+시스템 --> 발신인 : 수신확인결과출력
+deactivate 시스템
+
+
+@enduml
