@@ -1,0 +1,53 @@
+@startuml VoiceCall
+actor 발신인
+participant 로그인인증
+participant 시스템
+database DB
+actor 수신인
+
+autonumber 1.1
+발신인 -> 로그인인증 : 로그인시도
+activate 로그인인증
+
+로그인인증 -> DB : 계정정보확인요청
+activate DB
+
+DB -> DB : 계정확인
+activate DB
+deactivate DB
+
+DB --> 로그인인증 : 결과반환
+deactivate DB
+
+로그인인증 --> 발신인 : 로그인결과출력
+deactivate 로그인인증
+
+autonumber 2.1
+발신인 -> 시스템 : 수신자선택요청
+activate 시스템
+
+시스템 -> DB : 수신자조회
+activate DB
+
+DB -> DB : 수신자확인
+activate DB
+deactivate DB
+
+DB --> 시스템 : 결과반환
+deactivate DB
+
+시스템 --> 발신인 : 수신자선택결과출력
+deactivate 시스템
+
+autonumber 3.1
+발신인 -> 시스템 : 음성통화발신
+activate 시스템
+
+시스템 -> 수신인 : 수신인으로음성통화발신
+
+수신인 -> 시스템 : 수신확인
+
+시스템 -> 발신인 : 수신확인결과출력
+deactivate 시스템
+
+@enduml
