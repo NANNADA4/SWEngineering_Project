@@ -107,7 +107,6 @@ body {
 
 .EntryImage img {
     width: 13rem;
-    /* 이미지가 앞으로 */
     z-index: 3;
     transition: all 0.75s ease-out;
 }
