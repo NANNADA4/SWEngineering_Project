@@ -89,7 +89,7 @@ body {
 
 .card {
     transform-style: preserve-3d;
-    min-height: 60vh;
+    min-height: 65vh;
     width: 50rem;
     border-radius: 30px;
     background-color: white;
