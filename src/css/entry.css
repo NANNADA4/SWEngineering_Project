@@ -40,27 +40,27 @@ body {
 }
 
 .crossfade > figure:nth-child(1) {
-    background-image: url("./img/img_parallax.jpg");
+    background-image: url("../img/img_parallax.jpg");
 }
 
 .crossfade > figure:nth-child(2) {
     animation-delay: 6s;
-    background-image: url("./img/img_parallax 2.jpg");
+    background-image: url("../img/img_parallax 2.jpg");
 }
 
 .crossfade > figure:nth-child(3) {
     animation-delay: 12s;
-    background-image: url("./img/img_parallax 3.jpg");
+    background-image: url("../img/img_parallax 3.jpg");
 }
 
 .crossfade > figure:nth-child(4) {
     animation-delay: 18s;
-    background-image: url("./img/img_parallax 4.jpg");
+    background-image: url("../img/img_parallax 4.jpg");
 }
 
 .crossfade > figure:nth-child(5) {
     animation-delay: 24s;
-    background-image: url("./img/img_parallax 5.jpg");
+    background-image: url("../img/img_parallax 5.jpg");
 }
 
 @keyframes imageAnimation {
