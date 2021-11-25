@@ -121,15 +121,6 @@ body {
     z-index: 1;
 }
 
-.innerCircle {
-    width: 14.7rem;
-    height: 14.7rem;
-    position: absolute;
-    background: white;
-    border-radius: 50%;
-    z-index: 2;
-}
-
 .info h1 {
     font-size: 3rem;
     transition: all 0.75s ease-out;
