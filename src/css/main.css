@@ -5,8 +5,7 @@ body {
 }
 
 .navbar {
-    padding-left: 10%;
-    padding-right: 10%;
+    padding: 15px 3% 15px 3%;
 }
 
 .modal-bodyTitle {
@@ -28,9 +27,4 @@ body {
     margin-top: -15%;
     margin-bottom: -20%;
     width: initial;
-}
-
-.modal-comment {
-    width: max-content;
-    height: max-content;
 }
