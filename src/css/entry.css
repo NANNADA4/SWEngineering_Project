@@ -90,7 +90,7 @@ body {
 .card {
     transform-style: preserve-3d;
     min-height: 65vh;
-    width: 50rem;
+    width: 45rem;
     border-radius: 30px;
     background-color: white;
     padding: 0rem 5rem;
@@ -121,15 +121,6 @@ body {
     z-index: 1;
 }
 
-.innerCircle {
-    width: 14.7rem;
-    height: 14.7rem;
-    position: absolute;
-    background: white;
-    border-radius: 50%;
-    z-index: 2;
-}
-
 .info h1 {
     font-size: 3rem;
     transition: all 0.75s ease-out;
@@ -150,7 +141,7 @@ body {
 }
 
 .LinkTo button {
-    padding: 0.5rem 2rem;
+    padding: 1.3rem 2rem;
     background: white;
     border: none;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
