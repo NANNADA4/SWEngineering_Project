@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Gugi&family=Nanum+Gothic&family=Jua&family=Poppins:wght@400;500&display=swap");
+
+body {
+    font-family: "Nanum Gothic", sans-serif;
+}
+
+.navbar {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.modal-bodyTitle {
+    font-weight: bold;
+}
+
+.modal-bodyTitle {
+    text-align: center;
+}
+
+.modal-picture {
+    width: 100%;
+    height: 300px;
+    border-radius: 5%;
+}
+
+.d-block {
+    width: 80%;
+    margin-top: -15%;
+    margin-bottom: -20%;
+    width: initial;
+}
+
+.modal-comment {
+    width: max-content;
+    height: max-content;
+}

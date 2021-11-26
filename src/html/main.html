@@ -1,15 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>숫자인식</title>
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/main.css">
 </head>
 
 <body>
+    <div class="container_nav">
+        <nav class="navbar navbar-dark bg-dark">
+            <a class="navbar-brand" href="./entry.html">
+                <img src="../img/logo.png" width="24" height="24" class="d-inline-block align-text-top">
+                숫자인식 페이지
+            </a>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ManualModal">
+                Manual
+            </button>
+        </nav>
+    </div>
 
+    <div class="modal fade" id="ManualModal" tabindex="-1" data-bs-backdrop="static" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">페이지 이용방법</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-top">
+                        <h5 class="modal-bodyTitle">숫자인식 하기</h5>
+                        <p>
+                            1. 손글씨 변환을 원하는 이미지를 준비합니다. <br>(현재는 숫자만 지원합니다.) <br>
+                            <img class="modal-picture" src="../img/main/handwriting.jpg" alt="손글씨"> <br><br>
+                            2. 이미지를 업로드하고 인식하기를 누르세요. <br>
+                            <img class="modal-picture" src="../img/main/upload.jpg" alt="업로드"> <br><br>
+                            3. 커피 한 잔을 마시면서 결과가 나오기를 기다리세요. <br>
+                            <img class="modal-picture" src="../img/main/result.jpg" alt="결과"> <br><br>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">시작하기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="slidecaption" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#slidecaption" data-bs-slide-to="0" class="active" aria-current="true"
+                aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#slidecaption" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#slidecaption" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="../img/main/slide1.jpg" class="d-block w-100">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>빠르게 조회하기</h5>
+                    <p>빠르게 학생들의 정보를 조회하실 수 있습니다</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="../img/main/slide2.jpg" class="d-block w-100">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>간단하게 조회하기</h5>
+                    <p>학생들의 정보 조회. 더 이상 어렵지 않습니다</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="../img/main/slide3.jpg" class="d-block w-100">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>편리하게 조회하기</h5>
+                    <p>어디서든 편리하게 조회하실 수 있습니다</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/main.js"></script>
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>
