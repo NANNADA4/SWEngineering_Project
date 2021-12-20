@@ -33,6 +33,7 @@ body {
 .row {
     padding: 30px 15% 10px 15%;
     vertical-align: top;
+    height: max-content;
 }
 
 .main-content {
