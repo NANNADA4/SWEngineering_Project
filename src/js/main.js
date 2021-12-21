@@ -1,14 +1,8 @@
-// const item = document.querySelector(".carousel-item");
-// const caption = document.querySelector(".carousel-caption");
-// const img = document.querySelector(".d-block");
-
-// item.addEventListener("mouseenter", function (e) {
-//     img.style.transition = "all 0.5s ease";
-//     img.style.filter = "blur(10px)";
-//     img.style.transform = "scale(1.2)";
-// });
-
-// item.addEventListener("mouseleave", function (e) {
-//     img.style.filter = "";
-//     img.style.transform = "scale(1.0)";
-// });
+function CheckFileSize(file, Size) {
+    maxSize = Size * 1024 * 1024;
+    if (file.files[0].size > maxSize) {
+        alert("5MB 미만의 파일만 업로드 가능합니다.");
+        return false;
+    }
+    return true;
+}
