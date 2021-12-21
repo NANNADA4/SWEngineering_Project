@@ -40,3 +40,16 @@ body {
 .main-content {
     height: 16px;
 }
+
+.iframe-side {
+    position: absolute;
+    margin-left: 4%;
+}
+
+.updown {
+    border: 1px solid #c3c4c6;
+    height: 150px;
+    position: absolute;
+    margin-left: 2%;
+    margin-right: 2%;
+}
