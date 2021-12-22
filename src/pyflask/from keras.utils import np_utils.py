@@ -37,8 +37,8 @@ model.fit(
     X_train,
     Y_train,
     validation_data=(X_test, Y_test),
-    epochs=30,
-    batch_size=200,
+    epochs=50,
+    batch_size=500,
     verbose=2,
 )
 
