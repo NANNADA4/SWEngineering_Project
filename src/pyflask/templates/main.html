@@ -13,7 +13,7 @@
 <body>
     <div class="container_nav">
         <nav class="navbar navbar-dark bg-opacity-75">
-            <a class="navbar-brand" href="./entry.html">
+            <a class="navbar-brand" href="{{ url_for('index')}}">
                 <img src="{{ url_for('static', filename='img/logo.png') }}" width="24" height="24"
                     class="d-inline-block align-text-top">
                 숫자인식 페이지
@@ -132,7 +132,6 @@
                     <hr>
                     <form id="upload-form" method="post" action="http://127.0.0.1:5000/server"
                         enctype="multipart/form-data">
-                        <!-- Form 태그 안 Action속성에 Server URL 수정, 입력해주시면 됩니다! -->
                         <div class="input-group mb-3">
                             <input name="file" id="pictureMessage" type="file" accept="image/png"
                                 onchange="CheckFileSize(this, 5)" class="form-control" id="inputGroupFile02">
