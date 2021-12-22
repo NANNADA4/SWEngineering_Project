@@ -6,3 +6,24 @@ function CheckFileSize(file, Size) {
     }
     return true;
 }
+
+var webSocket = new WebSocket("ws://127.0.0.1:9999");
+var messageTextArea = document.getElementById("messageTextArea");
+
+webSocket.onopen = function (message) {
+    messageTextArea.value += "Server Connect";
+};
+
+webSocket.onmessage = function (message) {
+    messageTextArea.value = message.data;
+};
+
+function sendMessage() {
+    var message = document.getElementById("pictureMessage");
+    webSocket.send(message.value);
+    message.value = "";
+}
+
+function disconnect() {
+    webSocket.close();
+}
