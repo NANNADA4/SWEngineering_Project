@@ -2,36 +2,36 @@
 <html lang="ko">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>숫자 인식</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='entry.css')}}">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>숫자 인식</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='entry.css')}}">
 </head>
 
 <body>
-    <div class="crossfade">
-        <figure></figure>
-        <figure></figure>
-        <figure></figure>
-        <figure></figure>
-        <figure></figure>
+  <div class="crossfade">
+    <figure></figure>
+    <figure></figure>
+    <figure></figure>
+    <figure></figure>
+    <figure></figure>
+  </div>
+  <div class="card">
+    <div class="EntryImage">
+      <div class="circle"></div>
+      <img src="{{ url_for('static', filename='img/logo.png') }}" alt="EntryImage">
     </div>
-    <div class="card">
-        <div class="EntryImage">
-            <div class="circle"></div>
-            <img src="{{ url_for('static', filename='img/logo.png') }}" alt="EntryImage">
-        </div>
-        <div class="info">
-            <h1 class="title">숫자인식 페이지</h1>
-            <h3 class="subtitle">Convert your handwriting to text</h3>
-            <div class="LinkTo">
-                <button class="btn" onClick="location.href='main'" onmouseover="ClickTitle('손글씨 변환하러 가기');"
-                    onmouseout="ClickTitle('Convert your handwriting to text');">Go To Main
-                    Page</button>
-            </div>
-        </div>
+    <div class="info">
+      <h1 class="title">숫자인식 페이지</h1>
+      <h3 class="subtitle">Convert your handwriting to text</h3>
+      <div class="LinkTo">
+        <button class="btn" onClick="location.href='main'" onmouseover="ClickTitle('손글씨 변환하러 가기');"
+          onmouseout="ClickTitle('Convert your handwriting to text');">Go To Main
+          Page</button>
+      </div>
     </div>
-    <script src="{{ url_for('static', filename='entry.js')}}"></script>
+  </div>
+  <script src="{{ url_for('static', filename='entry.js')}}"></script>
 </body>
 
 </html>

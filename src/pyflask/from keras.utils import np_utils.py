@@ -30,7 +30,8 @@ model.add(Dense(512, input_dim=784, activation="relu"))
 model.add(Dense(10, activation="softmax"))
 
 # 딥러닝 구조 설정(loss 옵션을 다중 클래스에 적합한 categorical_crossentropy, 옵티마이저는 adam 설정)
-model.compile(loss="categorical_crossentropy", optimizer="adam", metrics=["accuracy"])
+model.compile(loss="categorical_crossentropy",
+              optimizer="adam", metrics=["accuracy"])
 
 # 모델 실행(X_test, Y_test로 검증, 200개씩 30번 학습)
 model.fit(
